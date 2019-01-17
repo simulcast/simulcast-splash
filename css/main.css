@@ -40,37 +40,54 @@ body {
   font-family: 'FluxisheElse', sans-serif;
   background-color: var(--off-white);
   font-size: 20px;
-  color: var(--orange);
+  color: var(--off-white);
 }
 
 #container {
   display: grid;
   place-items: center;
   height: 100vh;
+  width: 100vw;
 }
 
 #quote {
   cursor: pointer;
-  width: 60%;
-  background-color: var(--orange);
+  width: 60vw;
+  background-color: var(--red);
   padding: 1.5em;
   color: var(--off-white);
 }
 
+#bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  filter: brightness(0.7);
+}
+
 #content {
   text-align: center;
+  width: 60vw;
+  /*background-color: var(--red);*/
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 2.5em;
 }
 
 h3 {
   font-size: 1.5em;
 }
 
+h4 {
+  line-height: 0em;
+}
+
 a {
-  color: var(--pink);
+  color: var(--off-white);
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -257,6 +274,9 @@ textarea {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+    h1 {
+      font-size: 5em;
+    }
 }
 
 @media print,
