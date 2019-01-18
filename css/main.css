@@ -52,10 +52,24 @@ body {
 
 #quote {
   cursor: pointer;
-  width: 60vw;
+  width: 70%;
   background-color: var(--blue);
   padding: 1.5em;
   color: var(--off-white);
+}
+
+#attribution {
+  background-color: var(--off-white);
+  color: var(--blue);
+  padding: .5em;
+  position: fixed;
+}
+
+#logo {
+  position: fixed;
+  width: 3em;
+  height: 3em;
+  padding: .5em;
 }
 
 #bgvid {
@@ -68,10 +82,44 @@ body {
   filter: brightness(0.7);
 }
 
-#content {
+#links {
+  position: fixed;
+  padding: .5em;
+  right: 0px;
+  text-align: right;
+}
+
+#bio, #contact {
+  cursor: pointer;
+}
+
+#content-main {
   text-align: center;
-  width: 60vw;
+  width: 60%;
   /*background-color: var(--red);*/
+}
+
+#content-bio {
+  text-align: left;
+  padding: 1.5em;
+  width: 60%;
+  color: var(--blue);
+  background-color: var(--off-white);
+}
+
+#content-bio a {
+  color: var(--blue);
+}
+
+#content-contact {
+  text-align: center;
+  padding: 1.5em;
+  width: 60%;
+  color: var(--off-white);
+}
+
+#content-contact a {
+  color: var(--off-white);
 }
 
 h1 {
