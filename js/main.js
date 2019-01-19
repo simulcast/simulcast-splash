@@ -39,7 +39,7 @@ $( document ).ready(function() {
       }
       else if ($("#content-bio").is(":visible") == true) {
         $("#content-bio").fadeToggle("slow", function() {
-          $("#content-contact").fadeToggle("slow");
+          $("#content-contac").fadeToggle("slow");
         });
       }
       else {
