@@ -36,7 +36,9 @@ html {
 body {
   display: grid;
   place-items: center;
-  height: 100vh;
+  /*height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow-y: hidden;
   font-family: 'FluxisheElse', sans-serif;
   background-color: var(--off-white);
   font-size: 20px;
@@ -47,13 +49,15 @@ body {
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   display: grid;
   place-items: center;
-  height: 100vh;
+  /*height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
 }
 
 #quote {
   cursor: pointer;
   width: 70%;
+  font-size: .9em;
   background-color: var(--blue);
   padding: 1.5em;
   color: var(--off-white);
@@ -331,6 +335,9 @@ textarea {
     }
     h3 {
       font-size: 1.5em;
+    }
+    #quote {
+      font-size: 1em;
     }
 }
 
