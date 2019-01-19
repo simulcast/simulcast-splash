@@ -14,7 +14,7 @@ $( document ).ready(function() {
     $("#content-bio").hide();
     $("#content-contact").hide();
     $("links").hide();
-    /* load site when the initial quote is clicked */
+    /* hide quote / show site when the quote is clicked */
     $("#quote").click(function(){
       $("#quote").fadeOut(10, function() {
           /* callback for when the quote is faded out */
@@ -34,12 +34,18 @@ $( document ).ready(function() {
           $("#content-bio").fadeToggle("slow");
         });
       }
+      else if ($("#quote").is(":visible") == true) {
+        $("#quote").fadeToggle("slow", function() {
+          $("#content-bio").fadeToggle("slow");
+        });
+      }
       else {
         $("#content-bio").fadeToggle("slow", function() {
           $("#content-main").fadeToggle("slow");
         });
       }
     });
+    /* hide site and bio when contact is clicked */
     $("#contact").click(function() {
       if ($("#content-main").is(":visible") == true) {
         $("#content-main").fadeToggle("slow", function() {
@@ -48,7 +54,12 @@ $( document ).ready(function() {
       }
       else if ($("#content-bio").is(":visible") == true) {
         $("#content-bio").fadeToggle("slow", function() {
-          $("#content-contac").fadeToggle("slow");
+          $("#content-contact").fadeToggle("slow");
+        });
+      }
+      else if ($("#quote").is(":visible") == true) {
+        $("#quote").fadeToggle("slow", function() {
+          $("#content-contact").fadeToggle("slow");
         });
       }
       else {
@@ -57,4 +68,30 @@ $( document ).ready(function() {
         });
       }
     });
+    /* toggle quote and site/bio/contact when logo is clicked */
+    $("#logo").click(function() {
+      if ($("#content-main").is(":visible") == true) {
+        $("#content-main").fadeToggle("slow", function() {
+          $("#quote").fadeToggle("slow");
+        });
+      }
+      else if ($("#content-bio").is(":visible") == true) {
+        $("#content-bio").fadeToggle("slow", function() {
+          $("#quote").fadeToggle("slow");
+        });
+      }
+      else if ($("#content-contact").is(":visible") == true) {
+        $("#content-contact").fadeToggle("slow", function() {
+          $("#quote").fadeToggle("slow");
+        });
+      }
+      else {
+        $("#quote").fadeToggle("slow", function() {
+          $("#content-main").fadeToggle("slow");
+          if ($("#links").is(":visible") == false) {
+            $("#links").fadeToggle("slow");
+          }
+        });
+      }
+    })
 });
