@@ -10,10 +10,10 @@ $( document ).ready(function() {
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
     /* first sound loading */
-    var revcrash = new Tone.Player("./sound/revcrash.wav", function() {
+    var revcrash = new Tone.Player("./sound/revcrash.mp3", function() {
       console.log('crash loaded');
     }).toMaster();
-    var bass = new Tone.Player("./sound/bass.wav", function() {
+    var bass = new Tone.Player("./sound/bass.mp3", function() {
       console.log('bass loaded');
     }).toMaster();
     /* show the quote to initiate click when all buffers are loaded */
