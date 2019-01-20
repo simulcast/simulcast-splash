@@ -9,6 +9,18 @@ $( document ).ready(function() {
     });
     // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    /* first sound loading */
+    var revcrash = new Tone.Player("./sound/revcrash.wav", function() {
+      console.log('crash loaded');
+    }).toMaster();
+    var bass = new Tone.Player("./sound/bass.wav", function() {
+      console.log('bass loaded');
+    }).toMaster();
+    /* show the quote to initiate click when all buffers are loaded */
+    Tone.Buffer.on('load', function(){
+    	$("#quote").fadeToggle(10);
+    })
+
     /* hide homepage */
     $("#content-main").hide();
     $("#content-bio").hide();
@@ -16,15 +28,18 @@ $( document ).ready(function() {
     $("links").hide();
     /* hide quote / show site when the quote is clicked */
     $("#quote").click(function(){
-      $("#quote").fadeOut(10, function() {
+      /* sound */
+      revcrash.start();
+      /* routing */
+      $("#quote").fadeOut(7500, function() {
+          /* sound */
+          bass.start();
           /* callback for when the quote is faded out */
-          $("#content-main").fadeToggle("slow"); //fade in content
-          if ($("#links").is(":visible") == true) {
-            console.log("toggle - true visible");
+          $("#content-main").fadeToggle(10); //fade in content
+            if ($("#links").is(":visible") == true) {
           }
-          else if ($("#links").is(":visible") == false){
-            $("#links").fadeToggle("slow");
-            console.log("toggle - false visible");
+            else if ($("#links").is(":visible") == false){
+              $("#links").fadeToggle(10);
           }
       });
     });
