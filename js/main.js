@@ -19,11 +19,18 @@ $( document ).ready(function() {
       $("#quote").fadeOut(10, function() {
           /* callback for when the quote is faded out */
           $("#content-main").fadeToggle("slow"); //fade in content
-          $("#links").fadeToggle("slow"); //fade in links
+          if ($("#links").is(":visible") == true) {
+            console.log("toggle - true visible");
+          }
+          else if ($("#links").is(":visible") == false){
+            $("#links").fadeToggle("slow");
+            console.log("toggle - false visible");
+          }
       });
     });
     /* hide site and contact when bio is clicked */
     $("#bio").click(function() {
+      console.log('bio clicked');
       if ($("#content-main").is(":visible") == true) {
         $("#content-main").fadeToggle("slow", function() {
           $("#content-bio").fadeToggle("slow");

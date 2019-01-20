@@ -116,7 +116,7 @@ body {
 }
 
 #content-bio a {
-  color: var(--blue);
+  color: var(--pink);
 }
 
 #content-contact {
@@ -140,7 +140,7 @@ h3 {
 }
 
 h4 {
-  line-height: 0em;
+  font-size: 1em;
 }
 
 a {
