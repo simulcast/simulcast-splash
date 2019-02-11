@@ -119,6 +119,7 @@ canvas {
 
 #bio, #contact {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 #content-main {
