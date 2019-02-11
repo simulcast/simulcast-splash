@@ -1,5 +1,18 @@
 $( document ).ready(function() {
     console.log( "ready!" );
+    /* canvas */
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    const video = document.querySelector("bgvid");
+
+    video.addEventListener('play', () => {
+      function step() {
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
+        requestAnimationFrame(step)
+      }
+      requestAnimationFrame(step);
+    })
+    /* viewport shit */
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     window.addEventListener('resize', () => {
@@ -29,9 +42,9 @@ $( document ).ready(function() {
     /* hide quote / show site when the quote is clicked */
     $("#quote").click(function(){
       /* sound */
-      revcrash.start();
+      //revcrash.start();
       /* routing */
-      $("#quote").fadeOut(7500, function() {
+      $("#quote").fadeOut("slow", function() {
           /* sound */
           bass.start();
           /* callback for when the quote is faded out */
