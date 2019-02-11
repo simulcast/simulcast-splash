@@ -76,7 +76,7 @@ body {
   height: 3em;
   padding: .5em;
 }
-
+/*
 #bgvid {
   position: fixed;
   right: 0;
@@ -86,6 +86,28 @@ body {
   z-index: -100;
   filter: brightness(0.7);
   image-rendering: pixelated;
+}
+*/
+
+video {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+canvas {
+  position: fixed;
+  /* This will stretch the canvas to fill the page */
+  width: 100%;
+  height: 100%;
+  /* This will turn off antialiasing when the canvas gets stretched */
+  /* We need all of these for it to work cross-browser */
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  /* This makes the canvas behave like `background-size: cover` */
+  object-fit: cover;
+  z-index: -100;
 }
 
 #links {
