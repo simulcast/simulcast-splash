@@ -40,7 +40,7 @@ body {
   height: calc(var(--vh, 1vh) * 100);
   overflow-y: hidden;
   font-family: 'FluxisheElse', sans-serif;
-  background-color: var(--off-white);
+  background-color: var(--blue);
   font-size: 20px;
   color: var(--off-white);
 }
