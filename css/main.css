@@ -82,6 +82,8 @@ body {
   width: 3em;
   height: 3em;
   padding: .5em;
+  top: 0px;
+  left: 0px;
 }
 
 #bgvid {
@@ -120,6 +122,7 @@ canvas {
 #links {
   position: fixed;
   padding: .5em;
+  top: 0px;
   right: 0px;
   text-align: right;
 }
