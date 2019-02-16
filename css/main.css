@@ -31,6 +31,7 @@ html {
     --red: #db000b;
     --pink: #C70074;
     --blue: #0027a8;
+    --lav: #8a98dc;
 }
 
 body {
@@ -40,9 +41,9 @@ body {
   height: calc(var(--vh, 1vh) * 100);
   overflow-y: hidden;
   font-family: 'FluxisheElse', sans-serif;
-  background-color: var(--blue);
+  background-color: white;
   font-size: 20px;
-  color: var(--off-white);
+  color: var(--lav);
 }
 
 #container {
@@ -58,14 +59,20 @@ body {
   cursor: pointer;
   width: 70%;
   font-size: .9em;
-  background-color: var(--blue);
+  background-color: var(--lav);
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
   padding: 1.5em;
-  color: var(--off-white);
+  color: white;
 }
 
 #attribution {
-  background-color: var(--off-white);
-  color: var(--blue);
+  background-color: white;
+  border-color: var(--lav);
+  border-style: solid;
+  border-width: 2px;
+  color: var(--lav);
   padding: .5em;
   position: fixed;
 }
@@ -76,7 +83,7 @@ body {
   height: 3em;
   padding: .5em;
 }
-/*
+
 #bgvid {
   position: fixed;
   right: 0;
@@ -87,14 +94,14 @@ body {
   filter: brightness(0.7);
   image-rendering: pixelated;
 }
-*/
 
+/*
 video {
   opacity: 0;
   width: 0px;
   height: 0px;
 }
-
+*/
 canvas {
   position: fixed;
   /* This will stretch the canvas to fill the page */
@@ -131,16 +138,16 @@ canvas {
 
 #content-bio {
   text-align: left;
-  font-size: .9em;
+  font-size: 1em;
   padding: 1.5em;
   width: 60%;
   height: auto;
-  color: var(--blue);
-  background-color: var(--off-white);
+  color: white;
+  background-color: var(--lav);
 }
 
 #content-bio a {
-  color: var(--pink);
+  color: white;
 }
 
 #content-contact {
@@ -148,11 +155,11 @@ canvas {
   padding: 1.5em;
   width: 80%;
   height: auto;
-  color: var(--off-white);
+  color: var(--lav);
 }
 
 #content-contact a {
-  color: var(--off-white);
+  color: var(--lav);
 }
 
 h1 {
@@ -168,7 +175,7 @@ h4 {
 }
 
 a {
-  color: var(--off-white);
+  color: var(--lav);
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -207,7 +214,7 @@ hr {
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+
 
 audio,
 canvas,
@@ -217,6 +224,7 @@ svg,
 video {
     vertical-align: middle;
 }
+*/
 
 /*
  * Remove default fieldset styles.

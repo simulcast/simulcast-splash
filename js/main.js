@@ -1,22 +1,5 @@
 $( document ).ready(function() {
     console.log( "ready!" );
-    /* canvas */
-    const video = document.querySelector('video')
-    const canvas = document.querySelector('canvas')
-    const ctx = canvas.getContext('2d')
-    video.addEventListener('play', start)
-    function start() {
-      // Set the canvas size to match the video dimensions
-      canvas.width = video.videoWidth
-      canvas.height = video.videoHeight
-      paintFrame()
-    }
-    function paintFrame() {
-      requestAnimationFrame(paintFrame)
-      // Every frame, paint the current video frame to the canvas
-      ctx.drawImage(video,0,0);
-      ctx.filter = "brightness(75%)";
-    }
     /* viewport shit */
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -49,6 +32,7 @@ $( document ).ready(function() {
       /* sound */
       //revcrash.start();
       /* routing */
+      console.log('clicked');
       $("#quote").fadeOut("slow", function() {
           /* sound */
           bass.start();
@@ -133,5 +117,5 @@ $( document ).ready(function() {
           }
         });
       }
-    })
+    });
 });
