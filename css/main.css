@@ -63,7 +63,7 @@ body {
   border-color: white;
   border-style: solid;
   border-width: 2px;
-  padding: 1.5em;
+  padding: 1.3em;
   color: white;
 }
 
@@ -142,12 +142,12 @@ canvas {
   padding: 1.5em;
   width: 60%;
   height: auto;
-  color: white;
-  background-color: var(--lav);
+  color: var(--lav);
+  /*background-color: var(--lav);*/
 }
 
 #content-bio a {
-  color: white;
+  color: var(--lav);
 }
 
 #content-contact {

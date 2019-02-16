@@ -29,6 +29,9 @@ $( document ).ready(function() {
     $("links").hide();
     /* hide quote / show site when the quote is clicked */
     $("#quote").click(function(){
+      enter();
+    });
+    var enter = function() {
       /* sound */
       //revcrash.start();
       /* routing */
@@ -44,7 +47,7 @@ $( document ).ready(function() {
               $("#links").fadeToggle(10);
           }
       });
-    });
+    };
     /* hide site and contact when bio is clicked */
     $("#bio").click(function() {
       console.log('bio clicked');
