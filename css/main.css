@@ -84,6 +84,7 @@ body {
   padding: .5em;
   top: 0px;
   left: 0px;
+  cursor: pointer;
 }
 
 #bgvid {
